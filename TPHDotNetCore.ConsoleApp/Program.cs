@@ -52,18 +52,22 @@ Console.WriteLine("Hello, World!");
 
 //Ado.net Read
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
-//adoDotNetExample.Read();
+////adoDotNetExample.Read();
 
-//adoDotNetExample.Create("title", "author", "content");
+////adoDotNetExample.Create("title", "author", "content");
 
-//adoDotNetExample.Update(7, "test title", "test author", "text content");
+////adoDotNetExample.Update(7, "test title", "test author", "text content");
 
-//adoDotNetExample.Delete(3);
+////adoDotNetExample.Delete(3);
 
-adoDotNetExample.edit(3);
-adoDotNetExample.edit(6);
+//adoDotNetExample.edit(3);
+//adoDotNetExample.edit(6);
+
+
+DapperExample dapperExample = new DapperExample();
+dapperExample.Run();
 
 
 Console.ReadKey(); // press any key to exit the program
