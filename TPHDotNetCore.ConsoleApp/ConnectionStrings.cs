@@ -15,7 +15,9 @@ namespace TPHDotNetCore.ConsoleApp
             DataSource = "DESKTOP-SOD2VVR", //servername
             InitialCatalog = "TPHDotNetCore", //databasename
             UserID = "sa",
-            Password = "sa@123"
+            Password = "sa@123",
+            TrustServerCertificate = true,
+           
         };
     }
 }

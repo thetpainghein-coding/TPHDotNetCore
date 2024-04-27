@@ -66,8 +66,10 @@ Console.WriteLine("Hello, World!");
 //adoDotNetExample.edit(6);
 
 
-DapperExample dapperExample = new DapperExample();
-dapperExample.Run();
+//DapperExample dapperExample = new DapperExample();
+//dapperExample.Run();
 
+EFCoreExample eFCoreExample = new EFCoreExample();
+eFCoreExample.Run();
 
 Console.ReadKey(); // press any key to exit the program
