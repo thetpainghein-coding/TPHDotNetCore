@@ -6,19 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPHDotNetCore.ConsoleApp;
+namespace TPHDotNetCore.RestApi.Models;
 
 [Table("Tbl_Blog")]
-internal class BlogModel
+public class BlogModel
 {
     [Key]
-    public int BlogId { get; set; }
+    public int? BlogId { get; set; }
 
-    public string BlogTitle { get; set; }
+    public string? BlogTitle { get; set; }
 
-    public string BlogAuthor { get; set; }
+    public string? BlogAuthor { get; set; }
 
-    public string BlogContent { get; set; }
+    public string? BlogContent { get; set; }
 }
 
 //public record BlogEntity(int BlogId, string BlogName,string BlogAuthor, string BlogContent);
