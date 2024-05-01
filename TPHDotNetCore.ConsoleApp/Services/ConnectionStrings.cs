@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPHDotNetCore.ConsoleApp
+namespace TPHDotNetCore.ConsoleApp.Services
 {
     internal static class ConnectionStrings
     {
@@ -17,7 +17,7 @@ namespace TPHDotNetCore.ConsoleApp
             UserID = "sa",
             Password = "sa@123",
             TrustServerCertificate = true,
-           
+
         };
     }
 }

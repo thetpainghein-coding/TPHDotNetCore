@@ -8,13 +8,15 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using TPHDotNetCore.ConsoleApp.Dtos;
+using TPHDotNetCore.ConsoleApp.Services;
 
-namespace TPHDotNetCore.ConsoleApp
+namespace TPHDotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
 
-        public void Run() 
+        public void Run()
         {
             //Read();
             //Edit(1);
@@ -24,9 +26,10 @@ namespace TPHDotNetCore.ConsoleApp
             Delete(9);
         }
 
+        
         private void Read()
         {
-            
+
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             List<BlogDto> lst = db.Query<BlogDto>("select * from tbl_blog").ToList();
 
@@ -43,7 +46,7 @@ namespace TPHDotNetCore.ConsoleApp
         private void Edit(int Id)
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            var item = db.Query<BlogDto>("select * from tbl_blog where BlogId = @BlogId", new BlogDto { BlogId = Id}).FirstOrDefault();
+            var item = db.Query<BlogDto>("select * from tbl_blog where BlogId = @BlogId", new BlogDto { BlogId = Id }).FirstOrDefault();
             if (item is null)
             {
                 Console.WriteLine("Data not found.");
@@ -84,7 +87,7 @@ namespace TPHDotNetCore.ConsoleApp
 
         }
 
-        private void Update(int id, string title, string author, string content) 
+        private void Update(int id, string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -112,7 +115,7 @@ namespace TPHDotNetCore.ConsoleApp
             var item = new BlogDto
             {
                 BlogId = id,
-    
+
 
             };
             string query = @"DELETE [dbo].[Tbl_Blog]

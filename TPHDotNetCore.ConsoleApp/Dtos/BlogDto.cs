@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPHDotNetCore.ConsoleApp;
+namespace TPHDotNetCore.ConsoleApp.Dtos;
 
 [Table("Tbl_Blog")]
-internal class BlogModel
+public class BlogDto
 {
     [Key]
     public int BlogId { get; set; }

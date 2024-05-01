@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Metadata;
 
-namespace TPHDotNetCore.ConsoleApp
+namespace TPHDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
@@ -19,12 +19,12 @@ namespace TPHDotNetCore.ConsoleApp
             UserID = "sa",
             Password = "sa@123",
         };
-        
+
         public void Read()
         {
             //SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
 
-            
+
 
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
@@ -54,16 +54,16 @@ namespace TPHDotNetCore.ConsoleApp
 
         public void edit(int id)
         {
-            
+
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
 
             connection.Open();
-            
+
 
             string query = "select * from Tbl_Blog where BlogId = @BlogId";
 
-            
+
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
@@ -73,12 +73,12 @@ namespace TPHDotNetCore.ConsoleApp
 
             connection.Close();
 
-            if(dt.Rows.Count == 0) 
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No Data Found");
-                return; 
+                return;
             }
-           
+
             DataRow dr = dt.Rows[0];
 
             Console.WriteLine("--------------------------");
@@ -87,7 +87,7 @@ namespace TPHDotNetCore.ConsoleApp
             Console.WriteLine("Blog Author =>" + dr["BlogAuthor"]);
             Console.WriteLine("Blog Content =>" + dr["BlogContent"]);
             Console.WriteLine("--------------------------");
-           
+
         }
 
         public void Create(string title, string author, string content)
@@ -112,7 +112,7 @@ namespace TPHDotNetCore.ConsoleApp
             cmd.Parameters.AddWithValue("@BlogContent", content);
 
             int result = cmd.ExecuteNonQuery();
-            
+
 
             connection.Close();
 
@@ -162,7 +162,7 @@ namespace TPHDotNetCore.ConsoleApp
             SqlCommand cmd = new SqlCommand(query, connection);
 
             cmd.Parameters.AddWithValue("@BlogId", id);
-            
+
             int result = cmd.ExecuteNonQuery();
 
 

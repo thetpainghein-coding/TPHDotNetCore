@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPHDotNetCore.ConsoleApp
+namespace TPHDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {

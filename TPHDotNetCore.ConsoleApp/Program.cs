@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
-using TPHDotNetCore.ConsoleApp;
+using TPHDotNetCore.ConsoleApp.EFCoreExamples;
 
 
 Console.WriteLine("Hello, World!");
