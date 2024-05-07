@@ -10,7 +10,7 @@
 
   <ItemGroup>
 	    
-    <PackageReference Include="Dapper" Version="2.1.35" />
+  
 	    
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
@@ -18,7 +18,12 @@
 	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.18" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.18" />
 	<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+	<PackageReference Include="Dapper" Version="2.1.35" />
    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TPHDotNetCore.Shared\TPHDotNetCore.Shared.csproj" />
   </ItemGroup>
 
 </Project>
