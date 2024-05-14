@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.RestApi", "TPHDotNetCore.RestApi\TPHDotNetCore.RestApi.csproj", "{2A59D316-A380-4719-AFAD-2C39414ECB21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.Shared", "TPHDotNetCore.Shared\TPHDotNetCore.Shared.csproj", "{926EE4DD-3C60-48DC-B785-7DDFB1436AA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.Shared", "TPHDotNetCore.Shared\TPHDotNetCore.Shared.csproj", "{926EE4DD-3C60-48DC-B785-7DDFB1436AA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.RestApiWithNLayer", "TPHDotNetCore.RestApiWithNLayer\TPHDotNetCore.RestApiWithNLayer.csproj", "{5942185C-8978-49FF-9FB9-51BE53339C00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{926EE4DD-3C60-48DC-B785-7DDFB1436AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926EE4DD-3C60-48DC-B785-7DDFB1436AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926EE4DD-3C60-48DC-B785-7DDFB1436AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5942185C-8978-49FF-9FB9-51BE53339C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5942185C-8978-49FF-9FB9-51BE53339C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5942185C-8978-49FF-9FB9-51BE53339C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5942185C-8978-49FF-9FB9-51BE53339C00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
