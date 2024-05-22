@@ -88,4 +88,32 @@ namespace TPHDotNetCore.PizzaApi.Db
         public string PizzaOrderInvoiceNo { get; set; }
         public int PizzaExtraId { get; set; }
     }
+
+    public class PizzaOrderInvoiceHeadModel
+    {
+        public int PizzaOrderId { get; set; }
+        public string PizzaOrderInvoiceNo { get; set; }
+        public int PizzaId { get; set; }
+        public decimal TotalAmount { get; set; }
+        public string Pizza { get; set; }
+        public Decimal Price { get; set; }
+
+
+    }
+
+    public class PizzaOrderInvoiceDetailHeadModel
+    {
+        public int PizzaOrderDetailId { get; set; }
+        public string PizzaOrderInvoiceNo { get; set; }
+        public int PizzaExtraId { get; set; }
+        public string PizzaExtraName { get; set; }
+        public string Price { get; set; }
+
+    }
+
+    public class PizzaOrderInvoiceResponse
+    {
+        public PizzaOrderInvoiceHeadModel Order { get; set; }
+        public List<PizzaOrderInvoiceDetailHeadModel> OrderDetail { get; set; }
+    }
 }

@@ -21,4 +21,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TPHDotNetCore.Shared\TPHDotNetCore.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,11 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TPHDotNetCore.PizzaApi.Db;
+using TPHDotNetCore.PizzaApi.Queries;
+using TPHDotNetCore.Shared;
 
 namespace TPHDotNetCore.PizzaApi.Features
 {
@@ -11,10 +14,12 @@ namespace TPHDotNetCore.PizzaApi.Features
     public class PizzaController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
+        private readonly DapperService _dapperService;
 
         public PizzaController()
         {
             _appDbContext = new AppDbContext();
+            _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
         }
         [HttpGet]
         public async Task<IActionResult> GetAsync()
@@ -30,20 +35,45 @@ namespace TPHDotNetCore.PizzaApi.Features
             return Ok(lst);
         }
 
-        [HttpGet("Order/{invoiceNo}")]
-        public async Task<IActionResult> GetOrder(string invoiceNo)
-        {
-            var item = await _appDbContext.PizzaOrders.FirstOrDefaultAsync(x => x.PizzaOrderInvoiceNo == invoiceNo);
-            var lst = await _appDbContext.PizzaOrderDetails.Where(x => x.PizzaOrderInvoiceNo == invoiceNo).ToListAsync();
+        //[httpget("order/{invoiceno}")]
+        //public async task<iactionresult> getorder(string invoiceno)
+        //{
+        //    var item = await _appDbContext.PizzaOrders.FirstOrDefaultAsync(x => x.PizzaOrderInvoiceNo == invoiceNo);
+        //    var lst = await _appDbContext.PizzaOrderDetails.Where(x => x.PizzaOrderInvoiceNo == invoiceNo).ToListAsync();
 
-            return Ok(new
-            {
+        //    return Ok(new
+        //    {
+        //        Order = item,
+        //        OrderDetail = lst
+        //    });          
+        //}
+
+        [HttpGet("order/{invoiceNo}")]
+        public IActionResult GetOrder(string invoiceNo)
+        {
+            var item = _dapperService.QueryFirstOrDefault<PizzaOrderInvoiceHeadModel>
+                (
+                    PizzaQuery.PizzaOrderQuery,
+                    new { PizzaOrderInvoiceNo = invoiceNo }
+                );                   
+            
+            var lst = _dapperService.Query<PizzaOrderInvoiceDetailHeadModel>
+                (
+                    PizzaQuery.PizzaOrderDetailQuery,
+                    new { PizzaOrderInvoiceNo = invoiceNo }
+                );
+
+            var model = new PizzaOrderInvoiceResponse
+            { 
                 Order = item,
                 OrderDetail = lst
-            });
+            };
 
-            return Ok(lst);
+            return Ok(model);
+   
         }
+
+
 
         [HttpPost("Order")]
         public async Task<IActionResult> OrderAsync(OrderRequest orderRequest)
