@@ -22,7 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.ConsoleAppHtt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.ConsoleAppRestClientExamples", "TPHDotNetCore.ConsoleAppRestClientExamples\TPHDotNetCore.ConsoleAppRestClientExamples.csproj", "{EA9E4B21-869D-488C-BEF9-71688DD58998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.PizzaApi", "TPHDotNetCore.PizzaApi\TPHDotNetCore.PizzaApi.csproj", "{FB9BDF6A-F1AE-4F53-85C6-EE414919E3D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.PizzaApi", "TPHDotNetCore.PizzaApi\TPHDotNetCore.PizzaApi.csproj", "{FB9BDF6A-F1AE-4F53-85C6-EE414919E3D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.ConsoleAppRefitExamples", "TPHDotNetCore.ConsoleAppRefitExamples\TPHDotNetCore.ConsoleAppRefitExamples.csproj", "{D64077EB-ACFE-44CA-A0CF-6BC8E02BBBA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{FB9BDF6A-F1AE-4F53-85C6-EE414919E3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB9BDF6A-F1AE-4F53-85C6-EE414919E3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB9BDF6A-F1AE-4F53-85C6-EE414919E3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64077EB-ACFE-44CA-A0CF-6BC8E02BBBA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64077EB-ACFE-44CA-A0CF-6BC8E02BBBA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64077EB-ACFE-44CA-A0CF-6BC8E02BBBA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64077EB-ACFE-44CA-A0CF-6BC8E02BBBA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

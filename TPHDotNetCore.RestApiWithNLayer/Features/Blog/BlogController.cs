@@ -38,7 +38,7 @@ namespace TPHDotNetCore.RestApiWithNLayer.Features.Blog
         [HttpPost]
         public IActionResult Create(BlogModel blog)
         {
-            
+
             var result = _bl_Blog.CreateBlog(blog);
 
             string message = result > 0 ? "Saving Successful" : "Saving Failed";
@@ -46,7 +46,7 @@ namespace TPHDotNetCore.RestApiWithNLayer.Features.Blog
         }
 
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Update(int id, BlogModel blog)
         {
             var item = _bl_Blog.GetBlog(id); // to check the existence of the blog by id
@@ -79,7 +79,7 @@ namespace TPHDotNetCore.RestApiWithNLayer.Features.Blog
             return Ok(message); // http status 200
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             var item = _bl_Blog.GetBlog(id);
