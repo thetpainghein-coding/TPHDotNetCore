@@ -37,6 +37,7 @@
             txtTitle = new TextBox();
             txtAuthor = new TextBox();
             txtContent = new TextBox();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // btnCancel
@@ -87,10 +88,20 @@
             resources.ApplyResources(txtContent, "txtContent");
             txtContent.Name = "txtContent";
             // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(btnUpdate, "btnUpdate");
+            btnUpdate.BackColor = Color.FromArgb(0, 192, 192);
+            btnUpdate.ForeColor = SystemColors.ControlLightLight;
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // FrmBlog
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnUpdate);
             Controls.Add(txtContent);
             Controls.Add(txtAuthor);
             Controls.Add(txtTitle);
@@ -115,5 +126,6 @@
         private TextBox txtTitle;
         private TextBox txtAuthor;
         private TextBox txtContent;
+        private Button btnUpdate;
     }
 }

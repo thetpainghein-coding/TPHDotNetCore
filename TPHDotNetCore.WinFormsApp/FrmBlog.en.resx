@@ -177,6 +177,21 @@
   <data name="txtContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 124</value>
   </data>
+  <data name="btnUpdate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 43</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>&amp;Update</value>
+  </data>
+  <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>11, 28</value>
   </data>
