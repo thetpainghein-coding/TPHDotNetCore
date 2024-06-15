@@ -59,3 +59,11 @@ input::-webkit-inner-spin-button {
 input:disabled {
   background-color: white;
 }
+
+#productTable * {
+  text-align: center;
+}
+
+#productCartTable * {
+  text-align: center;
+}

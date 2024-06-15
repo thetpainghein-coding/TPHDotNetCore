@@ -11,20 +11,16 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link
-      href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/b-3.0.2/r-3.0.2/rg-1.5.0/sc-2.4.3/sb-1.7.1/datatables.min.css"
-      rel="stylesheet"
-    />
 
     <link
       href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
       rel="stylesheet"
       id="bootstrap-css"
     />
-
-    <link rel="stylesheet" href="dist/ladda-themeless.min.css" />
-
+    <link rel="stylesheet" href="DataTables/datatables.min.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- <link rel="stylesheet" href="dist/ladda-themeless.min.css" /> -->
   </head>
   <body>
     <h1>Products</h1>
@@ -46,7 +42,7 @@
       <button type="button" class="btn btn-success" id="btnSave">Save</button>
       <button type="button" class="btn btn-dark" id="btnCancel">Cancel</button>
 
-      <table id="productTable" class="display" style="width: 100%">
+      <table id="productTable" class="table table-striped" style="width: 100%">
         <thead>
           <tr>
             <th scope="col">No.</th>
@@ -60,7 +56,11 @@
         <tbody id="tbody"></tbody>
       </table>
 
-      <table id="productCartTable" class="display" style="width: 100%">
+      <table
+        id="productCartTable"
+        class="table table-striped"
+        style="width: 100%"
+      >
         <thead>
           <tr>
             <th>Product Name</th>
@@ -96,10 +96,13 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/b-3.0.2/r-3.0.2/rg-1.5.0/sc-2.4.3/sb-1.7.1/datatables.min.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
 
     <script>
-      new DataTable("#productCartTable");
-      new DataTable("#productTable");
+      $(document).ready(function () {
+        new DataTable("#productCartTable");
+        new DataTable("#productTable");
+      });
     </script>
 
     <script src="dist/spin.min.js"></script>
