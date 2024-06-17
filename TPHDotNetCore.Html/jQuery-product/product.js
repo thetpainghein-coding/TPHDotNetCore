@@ -133,14 +133,6 @@ function getProductTable() {
   $("#tbody").html(htmlRows);
 }
 
-function successMessage(message) {
-  alert(message);
-}
-
-function errorMessage(message) {
-  alert(message);
-}
-
 function clearControl() {
   $("#txtPname").val("");
   $("#txtPdesc").val("");
@@ -279,7 +271,7 @@ function qtyIncrement(id) {
   const jsonCartProduct = JSON.stringify(lst);
   localStorage.setItem(tblProductCart, jsonCartProduct);
 
-  successMessage("Adding to cart succesful");
+  // successMessage("Adding to cart succesful");
 
   getCartTable();
 }
@@ -298,7 +290,27 @@ function qtyDecrement(id) {
   const jsonCartProduct = JSON.stringify(lst);
   localStorage.setItem(tblProductCart, jsonCartProduct);
 
-  successMessage("Removing from cart succesful");
+  // successMessage("Removing from cart succesful");
 
   getCartTable();
+}
+
+///////////////////////////////////
+
+function successMessage(message) {
+  // alert(message);
+
+  Swal.fire({
+    title: "Action Success",
+    text: message,
+    icon: "success",
+  });
+}
+
+function errorMessage(message) {
+  Swal.fire({
+    title: "Action Failed",
+    text: message,
+    icon: "error",
+  });
 }

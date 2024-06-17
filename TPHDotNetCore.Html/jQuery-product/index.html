@@ -46,9 +46,9 @@
         <thead>
           <tr>
             <th scope="col">No.</th>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">Content</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
             <th scope="col">Actions</th>
             <th scope="col">Order</th>
           </tr>
@@ -98,15 +98,21 @@
     <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.8/b-3.0.2/r-3.0.2/rg-1.5.0/sc-2.4.3/sb-1.7.1/datatables.min.js"></script>
     <script src="DataTables/datatables.min.js"></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
       $(document).ready(function () {
         new DataTable("#productCartTable");
         new DataTable("#productTable");
       });
     </script>
-
-    <script src="dist/spin.min.js"></script>
-    <script src="dist/ladda.min.js"></script>
 
     <script src="product.js"></script>
   </body>

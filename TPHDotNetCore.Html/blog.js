@@ -2,6 +2,54 @@ const tblBlog = "blogs";
 let blogId = null;
 
 getBlogTable();
+// testConfirmMessage2();
+
+function testConfirmMessage() {
+  let confirmMessage = new Promise(function (success, error) {
+    const result = confirm("Are you sure want to delete?");
+    if (result) {
+      success();
+    } else {
+      error();
+    }
+  });
+
+  confirmMessage.then(
+    function (value) {
+      successMessage("Success");
+    },
+    function (error) {
+      errorMessage("Error");
+    }
+  );
+}
+
+function testConfirmMessage2() {
+  let confirmMessage = new Promise(function (success, error) {
+    Swal.fire({
+      title: "Confirm",
+      text: "Are you sure want to delete?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        success();
+      } else {
+        error();
+      }
+    });
+  });
+
+  confirmMessage.then(
+    function (value) {
+      successMessage("Success");
+    },
+    function (error) {
+      errorMessage("Error");
+    }
+  );
+}
 // createBlog()
 // updateBlog("2cc03e03-4e0c-404b-a4fb-4efaa923b38b", "new data","new data","new data")
 deleteBlog(
@@ -88,38 +136,38 @@ function updateBlog(id, title, author, content) {
 }
 
 function deleteBlog(id) {
-  let lst = getBlogs();
+  Swal.fire({
+    title: "Confirm",
+    text: "Are you sure want to delete?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes",
+  }).then((result) => {
+    if (!result.isConfirmed) return;
+    let lst = getBlogs();
 
-  const items = lst.filter((x) => x.id === id);
-  if (items.length == 0) {
-    console.log("No Data Found");
-    return;
-  }
+    const items = lst.filter((x) => x.id === id);
+    if (items.length == 0) {
+      console.log("No Data Found");
+      return;
+    }
 
-  // console.log(items.length);
-  // if(items.length == 0){
-  //   console.log("No Data Found");
-  //   return;
-  // }
+    // console.log(items.length);
+    // if(items.length == 0){
+    //   console.log("No Data Found");
+    //   return;
+    // }
 
-  lst = lst.filter((x) => x.id !== id);
-  const jsonBlog = JSON.stringify(lst);
-  localStorage.setItem(tblBlog, jsonBlog);
+    lst = lst.filter((x) => x.id !== id);
+    const jsonBlog = JSON.stringify(lst);
+    localStorage.setItem(tblBlog, jsonBlog);
 
-  successMessage("Deleteing Succesful");
-  getBlogTable();
+    successMessage("Deleteing Succesful");
+    getBlogTable();
 
-  console.log(tblBlog.length);
-  console.log(tblBlog);
-}
-
-function uuidv4() {
-  return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) =>
-    (
-      +c ^
-      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (+c / 4)))
-    ).toString(16)
-  );
+    console.log(tblBlog.length);
+    console.log(tblBlog);
+  });
 }
 
 function getBlogs() {
@@ -153,14 +201,6 @@ $("#btnSave").click(function () {
 $("#btnCancel").click(function () {
   clearControl();
 });
-
-function successMessage(message) {
-  alert(message);
-}
-
-function errorMessage(message) {
-  alert(message);
-}
 
 function clearControl() {
   $("#txtTitle").val("");
