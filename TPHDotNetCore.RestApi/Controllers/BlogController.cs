@@ -13,10 +13,17 @@ namespace TPHDotNetCore.RestApi.Controllers
     {
         private readonly AppDbContext _context;
 
-        public BlogController()
+        //public BlogController()
+        //{
+        //    _context = new AppDbContext();
+        //}
+
+       public BlogController(AppDbContext context)
         {
-            _context = new AppDbContext();
+            _context = context;
         }
+
+
 
         [HttpGet]
         public IActionResult Read()

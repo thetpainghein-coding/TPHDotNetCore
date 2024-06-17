@@ -9,16 +9,23 @@ using System.Reflection.Metadata;
 
 namespace TPHDotNetCore.ConsoleApp.AdoDotNetExamples
 {
-    internal class AdoDotNetExample
+    public class AdoDotNetExample
     {
-        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
-        {
-            DataSource = "DESKTOP-SOD2VVR", //servername
-            InitialCatalog = "TPHDotNetCore", //databasename
+        //private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        //{
+        //    DataSource = "DESKTOP-SOD2VVR", //servername
+        //    InitialCatalog = "TPHDotNetCore", //databasename
 
-            UserID = "sa",
-            Password = "sa@123",
-        };
+        //    UserID = "sa",
+        //    Password = "sa@123",
+        //};
+
+        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
+
+        public AdoDotNetExample(SqlConnectionStringBuilder sqlConnectionStringBuilder)
+        {
+            _sqlConnectionStringBuilder = sqlConnectionStringBuilder;
+        }
 
         public void Read()
         {
