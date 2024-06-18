@@ -30,11 +30,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.WinFormsApp",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.WinFormsAppSqlInjection", "TPHDotNetCore.WinFormsAppSqlInjection\TPHDotNetCore.WinFormsAppSqlInjection.csproj", "{A7C89783-EBCB-496D-A828-5CAFBA0ADB7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.NLayer.UI", "TPHDotNetCore.NLayer.UI\TPHDotNetCore.NLayer.UI.csproj", "{A86D076F-6354-4C49-874E-E51E5BC16F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.NLayer.UI", "TPHDotNetCore.NLayer.UI\TPHDotNetCore.NLayer.UI.csproj", "{A86D076F-6354-4C49-874E-E51E5BC16F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.NLayer.BusinessLogic", "TPHDotNetCore.NLayer.BusinessLogic\TPHDotNetCore.NLayer.BusinessLogic.csproj", "{6F243C1A-59B3-4EDF-9066-26AE5B7E53E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.NLayer.BusinessLogic", "TPHDotNetCore.NLayer.BusinessLogic\TPHDotNetCore.NLayer.BusinessLogic.csproj", "{6F243C1A-59B3-4EDF-9066-26AE5B7E53E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.NLayer.DataAccess", "TPHDotNetCore.NLayer.DataAccess\TPHDotNetCore.NLayer.DataAccess.csproj", "{839D9043-6E0D-4CA4-B691-31E68142FFFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.NLayer.DataAccess", "TPHDotNetCore.NLayer.DataAccess\TPHDotNetCore.NLayer.DataAccess.csproj", "{839D9043-6E0D-4CA4-B691-31E68142FFFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.MinimalApi", "TPHDotNetCore.MinimalApi\TPHDotNetCore.MinimalApi.csproj", "{63ADB7F9-0F45-46A9-84ED-48323AE06F97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,10 @@ Global
 		{839D9043-6E0D-4CA4-B691-31E68142FFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{839D9043-6E0D-4CA4-B691-31E68142FFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{839D9043-6E0D-4CA4-B691-31E68142FFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63ADB7F9-0F45-46A9-84ED-48323AE06F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63ADB7F9-0F45-46A9-84ED-48323AE06F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63ADB7F9-0F45-46A9-84ED-48323AE06F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63ADB7F9-0F45-46A9-84ED-48323AE06F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
