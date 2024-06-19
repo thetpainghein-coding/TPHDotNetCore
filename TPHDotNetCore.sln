@@ -36,7 +36,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.NLayer.Busine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.NLayer.DataAccess", "TPHDotNetCore.NLayer.DataAccess\TPHDotNetCore.NLayer.DataAccess.csproj", "{839D9043-6E0D-4CA4-B691-31E68142FFFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.MinimalApi", "TPHDotNetCore.MinimalApi\TPHDotNetCore.MinimalApi.csproj", "{63ADB7F9-0F45-46A9-84ED-48323AE06F97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.MinimalApi", "TPHDotNetCore.MinimalApi\TPHDotNetCore.MinimalApi.csproj", "{63ADB7F9-0F45-46A9-84ED-48323AE06F97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.MvcApp", "TPHDotNetCore.MvcApp\TPHDotNetCore.MvcApp.csproj", "{B9CF36F9-97A0-4DD2-926D-32CBE37E58C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +106,10 @@ Global
 		{63ADB7F9-0F45-46A9-84ED-48323AE06F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63ADB7F9-0F45-46A9-84ED-48323AE06F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63ADB7F9-0F45-46A9-84ED-48323AE06F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9CF36F9-97A0-4DD2-926D-32CBE37E58C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9CF36F9-97A0-4DD2-926D-32CBE37E58C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9CF36F9-97A0-4DD2-926D-32CBE37E58C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9CF36F9-97A0-4DD2-926D-32CBE37E58C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
