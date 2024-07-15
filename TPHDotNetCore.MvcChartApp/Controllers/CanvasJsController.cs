@@ -4,13 +4,22 @@ namespace TPHDotNetCore.MvcChartApp.Controllers
 {
     public class CanvasJsController : Controller
     {
-        public IActionResult Index()
+        private readonly ILogger<CanvasJsController> _logger;
+
+		public CanvasJsController(ILogger<CanvasJsController> logger)
+		{
+			_logger = logger;
+		}
+
+		public IActionResult Index()
         {
+           
             return View();
         }
 
         public IActionResult LineChart()
         {
+            _logger.LogInformation("Canvas Chart: Line Chart...");
             return View();
         }
     }
