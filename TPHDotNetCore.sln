@@ -44,7 +44,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.MvcApp2", "TP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.MvcChartApp", "TPHDotNetCore.MvcChartApp\TPHDotNetCore.MvcChartApp.csproj", "{4D800390-9FE2-4797-8DD1-0DD19129462E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.ConsoleAppLogging", "TPHDotNetCore.ConsoleAppLogging\TPHDotNetCore.ConsoleAppLogging.csproj", "{5D01983D-B2A0-4225-913F-AEE8EE85E291}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPHDotNetCore.ConsoleAppLogging", "TPHDotNetCore.ConsoleAppLogging\TPHDotNetCore.ConsoleAppLogging.csproj", "{5D01983D-B2A0-4225-913F-AEE8EE85E291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPHDotNetCore.RealTimeChatApp", "TPHDotNetCore.RealTimeChatApp\TPHDotNetCore.RealTimeChatApp.csproj", "{C76BFDBA-662C-4777-B1D7-C38BE69BFB2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,6 +130,10 @@ Global
 		{5D01983D-B2A0-4225-913F-AEE8EE85E291}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D01983D-B2A0-4225-913F-AEE8EE85E291}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D01983D-B2A0-4225-913F-AEE8EE85E291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76BFDBA-662C-4777-B1D7-C38BE69BFB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76BFDBA-662C-4777-B1D7-C38BE69BFB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76BFDBA-662C-4777-B1D7-C38BE69BFB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76BFDBA-662C-4777-B1D7-C38BE69BFB2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
